@@ -1,0 +1,11 @@
+h1 {
+    color:red;
+    background-color:yellow;
+}
+
+p {
+    color: purple;
+    background-color: black;
+    width: 250px;
+    height: 250px;
+}
