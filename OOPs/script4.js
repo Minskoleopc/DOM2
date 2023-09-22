@@ -92,7 +92,7 @@ console.log(amolC instanceof PersonB)
 console.log(sarikaC instanceof PersonB)
 
 console.log(amolC.__proto__ === PersonB.prototype)
-console.log(sarikaCC.__proto__ === PersonB.prototype)
+console.log(sarikaC.__proto__ === PersonB.prototype)
 
 // Where to define a property to make it common
 

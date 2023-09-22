@@ -51,7 +51,6 @@ Person.prototype.displayName = function(){
 
 Person.prototype.country = "Bharat"
 
-
 console.log(amol2)
 console.log(chinmay2)
 
