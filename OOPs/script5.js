@@ -93,7 +93,7 @@ console.log(amolC.__proto__ === PersonB.prototype)
 console.log(mayuriC instanceof PersonB)
 console.log(mayuriC instanceof PersonB)
 
-// 10 am
+// 8:30 am
 
 
 
