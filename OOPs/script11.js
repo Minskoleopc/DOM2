@@ -94,7 +94,6 @@ class Student {
     }
 }
 
-
 class Teacher extends Student {
     constructor(fn, ln, adharNo, salary) {
         super(fn, ln, adharNo)
