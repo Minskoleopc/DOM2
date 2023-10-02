@@ -13,9 +13,7 @@ class Addition {
     //     console.log(x+y+z+a)
     // }
 
-
     addition(x, y, z, a) {
-
         if (x != undefined && y != undefined && z != undefined && a != undefined) {
             console.log(x + y + z + a)
         }
