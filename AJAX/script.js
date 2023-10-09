@@ -1,64 +1,90 @@
-let urls = [
-    "https://reqres.in/api/users/2",
-    "https://reqres.in/api/users/1",
-    "https://reqres.in/api/users/3999",
-]
-let request = urls.map(function(url){
-   return  fetch(url);
-})
-Promise.all(request)
-.then(function(responses){
-    return Promise.all(responses.map(function(res){
-       return  res.json();
-    }))
-})
-.then(function(dataArray){
-    dataArray.forEach(function(el){
-        console.log(el.data)
-        if(el.data != undefined){
-            document.write(`<h1>${el.data.first_name}</h1>`)
-            document.write(`<h1>${el.data.last_name}</h1>`)
-            document.write(`<h1>${el.data.email}</h1>`)
-            document.write(`<h1>${el.data.id}</h1>`)
-            document.write(`<img src = ${el.data.avatar}>`)
-        }
-    })
-})
-.catch(function(error){
-    console.log(error)
-})
+// function additionA(){
+//     console.log("A is printed")
+// }
 
+// function additionB(){
+//     console.log("B is printed")
+// }
+// additionB()
+// additionA()
 
-// Program 2
-const timeOut = new Promise(function(_,reject){
-    setTimeout(function(){
-        reject("Time exceed")
-    },5)
+// program 2
 
-})
-function getUser(id){
-   return  fetch(`https://reqres.in/api/users/${id}`)
-    .then(function(res){
-       return  res.json()
-    })
+// async
+// function additionC(){
+//     // this function will execute after 3 seconds 
+//     setTimeout(function(){
+//         console.log("function C is printed")
+//     },3000)
+
+// }
+// function additionD(){
+//     console.log("function D is printed")
+// }
+
+// additionC()
+// additionD()
+
+// program 3
+// user created ====> get id for user =====> get info for user
+function getUserInfo() {
+    setTimeout(function () {
+        console.log("user created")
+    }, 3000)
+
+    setTimeout(function () {
+        console.log("get id for user")
+    }, 2000)
+
+    setTimeout(function () {
+        console.log("get info for user")
+    }, 1000)
+
 }
+//getUserInfo()
+// async code -----> synchronously??
+// call back hell
+function getUserInfo2() {
+    setTimeout(function () {
+        console.log("user created")
+        setTimeout(function () {
+            console.log("get id for user")
+            setTimeout(function () {
+                console.log("get info for user")
+            }, 1000)
+        }, 2000)
+    }, 3000)
+}
+getUserInfo2()
 
-Promise.race([timeOut,getUser(2)])
-.then(function(res){
-    console.log(res)
+// promises -------> 
+// async code --- sychronously removing call back function 
+
+let pro = new Promise(function(resolve,reject){
+    let a = 10
+    let b = 100
+    if(a == b){
+        resolve("hello")
+    }
+    else {
+        reject("bye") 
+    }
 })
-.catch(function(error){
-    console.log(error)
-})
-Promise.allSettled([timeOut,getUser(2)])
-.then(function(res){
-    console.log(res)
+// consuming the promise
+pro.then(function(str){
+    console.log(str)
+},function(str){
+    console.log(str)
 })
 
-Promise.any([getUser(1),timeOut,getUser(2)])
-.then(function(res){
-    console.log(res)
-})
+
+
+
+
+
+
+
+
 
 
 
