@@ -76,7 +76,17 @@ pro.then(function(str){
 },function(str){
     console.log(str)
 })
-
+// fri sat sun 
+// sql 
+// typescript 
+// react js 
+// java 
+// django 
+// selenium
+// html css
+// cypress
+// playwright
+// javascript - projects
 
 
 
