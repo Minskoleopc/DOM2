@@ -27,7 +27,6 @@
 // <p id = "three" class = "four five" name = "nm">Para</p>
 
 let ele = document.querySelector('p')
-
 console.log(ele.className)
 ele.classList.add("six")
 ele.classList.remove("six")

@@ -56,7 +56,6 @@ info.display()
 // info3.displayName()
 
 // program 4
-
 var firstNameOne = "ram"
 var lastNameOne  = "dani"
 let info4 = {

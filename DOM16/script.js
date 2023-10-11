@@ -24,7 +24,6 @@ buttonOne.addEventListener('click',function(){
 </li> */}
 
 function addButtons(li){
-
     let r = document.createElement('button') // <button></button>
     r.textContent = "Remove" // <button>Remove</button>
     r.classList.add('remove') //<button class = "remove">Remove</button>

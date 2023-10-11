@@ -102,7 +102,6 @@ let q222 = q111(114, 4)
 // }
 // let q2222 = q1112(114,4)
 // console.log(q2222)
-
 let g1 = (x, y) => x - y
 let q2222 = g1(114, 4)
 console.log(q2222)

@@ -81,10 +81,7 @@ display()
 //console.log(y2)
 
 
-{
-    var h = 1000000
-}
-console.log(h)
+
 
 
 
